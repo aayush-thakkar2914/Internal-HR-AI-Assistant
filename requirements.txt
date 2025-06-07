@@ -1,0 +1,68 @@
+# FastAPI and ASGI server
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+
+# Database
+cx-Oracle==8.3.0
+SQLAlchemy==2.0.23
+alembic==1.13.0
+
+# OpenSearch and search
+opensearch-py==2.4.2
+sentence-transformers==2.2.2
+
+# AI and ML
+groq==0.4.1
+transformers==4.36.0
+torch==2.1.0
+numpy==1.24.3
+
+# Authentication and Security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.6
+bcrypt==4.0.1
+
+# HTTP and async
+httpx==0.25.2
+aiofiles==23.2.1
+requests==2.31.0
+
+# Data validation and serialization
+pydantic==2.5.0
+pydantic-settings==2.1.0
+email-validator==2.1.0
+
+# Environment and configuration
+python-dotenv==1.0.0
+PyYAML==6.0.1
+
+# Logging and monitoring
+structlog==23.2.0
+rich==13.7.0
+
+# Date and time
+python-dateutil==2.8.2
+pytz==2023.3
+
+# File processing
+PyPDF2==3.0.1
+python-docx==1.1.0
+openpyxl==3.1.2
+
+# Testing (optional)
+pytest==7.4.3
+pytest-asyncio==0.21.1
+httpx==0.25.2
+
+# CORS and middleware
+starlette==0.27.0
+
+# Background tasks
+celery==5.3.4
+redis==5.0.1
+
+# Utilities
+click==8.1.7
+jinja2==3.1.2
