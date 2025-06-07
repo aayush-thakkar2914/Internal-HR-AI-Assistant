@@ -1,68 +1,152 @@
-# FastAPI and ASGI server
-fastapi==0.104.1
-uvicorn[standard]==0.24.0
+# HR AI Assistant - Updated Requirements
+# Optimized for maximum compatibility and efficiency
+# Python 3.11+ recommended
+
+# ==================================================
+# CORE FRAMEWORK
+# ==================================================
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+starlette==0.35.1
 python-multipart==0.0.6
 
-# Database
+# ==================================================
+# DATABASE & ORM
+# ==================================================
 cx-Oracle==8.3.0
-SQLAlchemy==2.0.23
-alembic==1.13.0
+SQLAlchemy==2.0.25
+alembic==1.13.1
+psycopg2-binary==2.9.9  # For PostgreSQL support if needed
 
-# OpenSearch and search
+# ==================================================
+# SEARCH & VECTOR DATABASE
+# ==================================================
 opensearch-py==2.4.2
-sentence-transformers==2.2.2
+# sentence-transformers==2.2.2  # Install after PyTorch
+faiss-cpu==1.7.4  # Alternative vector search
 
-# AI and ML
+# ==================================================
+# AI & MACHINE LEARNING
+# ==================================================
 groq==0.4.1
-transformers==4.36.0
-torch==2.1.0
-numpy==1.24.3
+# Note: Install PyTorch separately using the installation script
+# transformers==4.36.2  # Install after PyTorch
+numpy==1.24.4
+scikit-learn==1.3.2
 
-# Authentication and Security
+# ==================================================
+# AUTHENTICATION & SECURITY
+# ==================================================
 python-jose[cryptography]==3.3.0
 passlib[bcrypt]==1.7.4
-python-multipart==0.0.6
-bcrypt==4.0.1
+bcrypt==4.1.2
+cryptography==42.0.0
 
-# HTTP and async
-httpx==0.25.2
+# ==================================================
+# DATA VALIDATION & SERIALIZATION
+# ==================================================
+pydantic==2.5.3
+pydantic-settings==2.1.0
+email-validator==2.1.0.post1
+
+# ==================================================
+# HTTP & ASYNC
+# ==================================================
+httpx==0.26.0
 aiofiles==23.2.1
 requests==2.31.0
+websockets==12.0
 
-# Data validation and serialization
-pydantic==2.5.0
-pydantic-settings==2.1.0
-email-validator==2.1.0
-
-# Environment and configuration
+# ==================================================
+# CONFIGURATION & ENVIRONMENT
+# ==================================================
 python-dotenv==1.0.0
 PyYAML==6.0.1
+click==8.1.7
 
-# Logging and monitoring
+# ==================================================
+# LOGGING & MONITORING
+# ==================================================
 structlog==23.2.0
 rich==13.7.0
+colorlog==6.8.0
 
-# Date and time
+# ==================================================
+# DATE & TIME
+# ==================================================
 python-dateutil==2.8.2
-pytz==2023.3
+pytz==2023.4
 
-# File processing
+# ==================================================
+# FILE PROCESSING
+# ==================================================
 PyPDF2==3.0.1
 python-docx==1.1.0
 openpyxl==3.1.2
+Pillow==10.2.0
+python-magic==0.4.27  # File type detection
 
-# Testing (optional)
-pytest==7.4.3
-pytest-asyncio==0.21.1
-httpx==0.25.2
-
-# CORS and middleware
-starlette==0.27.0
-
-# Background tasks
-celery==5.3.4
+# ==================================================
+# BACKGROUND TASKS & CACHING
+# ==================================================
+celery==5.3.6
 redis==5.0.1
+kombu==5.3.4
 
-# Utilities
-click==8.1.7
-jinja2==3.1.2
+# ==================================================
+# WEB & TEMPLATES
+# ==================================================
+Jinja2==3.1.3
+MarkupSafe==2.1.4
+
+# ==================================================
+# DEVELOPMENT & TESTING
+# ==================================================
+# Install separately or uncomment if needed:
+# pytest==8.0.0
+# pytest-asyncio==0.23.4
+# pytest-mock==3.12.0
+# pytest-cov==4.1.0
+# black==24.1.1
+# flake8==7.0.0
+# mypy==1.8.0
+
+# ==================================================
+# UTILITIES
+# ==================================================
+tenacity==8.2.3  # Retry logic
+phonenumbers==8.13.27  # Phone number validation
+validators==0.22.0  # Data validation
+python-slugify==8.0.2  # URL slug generation
+chardet==5.2.0  # Character encoding detection
+tqdm==4.66.1  # Progress bars
+
+# ==================================================
+# PRODUCTION & DEPLOYMENT
+# ==================================================
+gunicorn==21.2.0
+whitenoise==6.6.0  # Static file serving
+sentry-sdk[fastapi]==1.40.0  # Error tracking
+
+# ==================================================
+# OPTIONAL: DATABASE ALTERNATIVES
+# ==================================================
+asyncpg==0.29.0  # PostgreSQL async driver
+motor==3.3.2  # MongoDB async driver
+redis[hiredis]==5.0.1  # Redis with hiredis parser
+
+# ==================================================
+# OPTIONAL: ADDITIONAL AI/ML
+# ==================================================
+openai==1.10.0  # OpenAI API client
+langchain==0.1.4  # LangChain framework
+chromadb==0.4.22  # Vector database alternative
+
+# ==================================================
+# PYTORCH CPU INSTALLATION (Run separately)
+# ==================================================
+# For CPU-only PyTorch (more efficient), install with:
+# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+# 
+# For CUDA support, use:
+# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121

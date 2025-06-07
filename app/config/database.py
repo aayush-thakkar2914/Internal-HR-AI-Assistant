@@ -11,7 +11,7 @@ from sqlalchemy import create_engine, MetaData
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, Session
 from sqlalchemy.pool import QueuePool
-import cx_Oracle
+import oracledb # Make oracledb usage explicit for linters; SQLAlchemy uses it implicitly.
 from dotenv import load_dotenv
 
 # Load environment variables
@@ -21,8 +21,8 @@ load_dotenv()
 ORACLE_HOST = os.getenv("ORACLE_HOST", "localhost")
 ORACLE_PORT = os.getenv("ORACLE_PORT", "1521")
 ORACLE_SERVICE_NAME = os.getenv("ORACLE_SERVICE_NAME", "XE")
-ORACLE_USERNAME = os.getenv("ORACLE_USERNAME", "hr_user")
-ORACLE_PASSWORD = os.getenv("ORACLE_PASSWORD", "hr_password")
+ORACLE_USERNAME = os.getenv("ORACLE_USERNAME")
+ORACLE_PASSWORD = os.getenv("ORACLE_PASSWORD")
 
 def get_database_url() -> str:
     """
@@ -32,7 +32,7 @@ def get_database_url() -> str:
         str: Complete database connection URL
     """
     return (
-        f"oracle+cx_oracle://{ORACLE_USERNAME}:{ORACLE_PASSWORD}@"
+        f"oracle+oracledb://{ORACLE_USERNAME}:{ORACLE_PASSWORD}@"
         f"{ORACLE_HOST}:{ORACLE_PORT}/{ORACLE_SERVICE_NAME}"
     )
 

@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Invitation</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { background-color: #FF9800; color: white; padding: 20px; text-align: center; }
+        .content { background-color: #f9f9f9; padding: 20px; }
+        .footer { background-color: #333; color: white; padding: 15px; text-align: center; font-size: 12px; }
+        .details { background-color: white; padding: 15px; margin: 10px 0; border-left: 4px solid #FF9800; }
+        .button { display: inline-block; padding: 12px 25px; background-color: #FF9800; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 Your Feedback Matters</h1>
+        </div>
+        <div class="content">
+            <p>Dear {{ employee_name }},</p>
+            <p>You have been invited to participate in an important survey. Your feedback helps us improve our workplace and better serve our employees.</p>
+            
+            <div class="details">
+                <h3>Survey Details:</h3>
+                <p><strong>Title:</strong> {{ survey_title }}</p>
+                <p><strong>Description:</strong> {{ survey_description }}</p>
+                <p><strong>Estimated Time:</strong> {{ estimated_duration }} minutes</p>
+                <p><strong>Deadline:</strong> {{ deadline }}</p>
+                {% if is_anonymous %}
+                <p><strong>Type:</strong> Anonymous Survey</p>
+                {% endif %}
+            </div>
+            
+            <p style="text-align: center;">
+                <a href="{{ survey_link }}" class="button">Take Survey Now</a>
+            </p>
+            
+            <p>Your participation is valuable and appreciated. All responses will be treated confidentially.</p>
+        </div>
+        <div class="footer">
+            <p>{{ company_name }} HR Department | {{ hr_email }} | {{ hr_phone }}</p>
+        </div>
+    </div>
+</body>
+</html>
+            

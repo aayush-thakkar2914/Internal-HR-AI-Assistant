@@ -24,7 +24,7 @@ class DocumentService:
     
     def __init__(self):
         self.upload_directory = Path(os.getenv("UPLOAD_DIRECTORY", "./uploads"))
-        self.max_file_size = int(os.getenv("MAX_FILE_SIZE", "10485760"))  # 10MB
+        self.max_file_size = int(os.getenv("MAX_FILE_SIZE", "10485760")) 
         self.allowed_extensions = os.getenv("ALLOWED_EXTENSIONS", ".pdf,.docx,.txt,.xlsx").split(",")
         
         # Ensure upload directory exists

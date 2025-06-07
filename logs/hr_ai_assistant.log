@@ -1,0 +1,150 @@
+2025-06-07 14:54:53 | INFO     | hr_ai_assistant.startup | setup_logging:163 | Logging configured - Level: INFO, Debug: True
+2025-06-07 14:54:53 | INFO     | hr_ai_assistant.startup | setup_logging:164 | Log files location: C:\Internal HR AI Assistant\logs
+2025-06-07 14:54:53 | INFO     | app.main | lifespan:56 | Starting HR AI Assistant application...
+2025-06-07 14:54:53 | INFO     | app.main | lifespan:60 | Initializing database...
+2025-06-07 14:54:55 | ERROR    | app.main | lifespan:85 | Failed to start application: (oracledb.exceptions.DatabaseError) ORA-01017: invalid username/password; logon denied
+Help: https://docs.oracle.com/error-help/db/ora-01017/
+(Background on this error at: https://sqlalche.me/e/20/4xp6)
+2025-06-07 14:56:29 | INFO     | hr_ai_assistant.startup | setup_logging:163 | Logging configured - Level: INFO, Debug: True
+2025-06-07 14:56:29 | INFO     | hr_ai_assistant.startup | setup_logging:164 | Log files location: C:\Internal HR AI Assistant\logs
+2025-06-07 14:56:29 | INFO     | app.main | lifespan:56 | Starting HR AI Assistant application...
+2025-06-07 14:56:29 | INFO     | app.main | lifespan:60 | Initializing database...
+2025-06-07 14:56:30 | ERROR    | app.main | lifespan:85 | Failed to start application: (oracledb.exceptions.DatabaseError) ORA-01017: invalid username/password; logon denied
+Help: https://docs.oracle.com/error-help/db/ora-01017/
+(Background on this error at: https://sqlalche.me/e/20/4xp6)
+2025-06-07 14:58:08 | INFO     | hr_ai_assistant.startup | setup_logging:163 | Logging configured - Level: INFO, Debug: True
+2025-06-07 14:58:08 | INFO     | hr_ai_assistant.startup | setup_logging:164 | Log files location: C:\Internal HR AI Assistant\logs
+2025-06-07 14:58:09 | INFO     | app.main | lifespan:56 | Starting HR AI Assistant application...
+2025-06-07 14:58:09 | INFO     | app.main | lifespan:60 | Initializing database...
+2025-06-07 14:58:10 | ERROR    | app.main | lifespan:85 | Failed to start application: (oracledb.exceptions.DatabaseError) ORA-01017: invalid username/password; logon denied
+Help: https://docs.oracle.com/error-help/db/ora-01017/
+(Background on this error at: https://sqlalche.me/e/20/4xp6)
+2025-06-07 15:03:29 | INFO     | hr_ai_assistant.startup | setup_logging:163 | Logging configured - Level: INFO, Debug: True
+2025-06-07 15:03:29 | INFO     | hr_ai_assistant.startup | setup_logging:164 | Log files location: C:\Internal HR AI Assistant\logs
+2025-06-07 15:03:29 | INFO     | app.main | lifespan:56 | Starting HR AI Assistant application...
+2025-06-07 15:03:29 | INFO     | app.main | lifespan:60 | Initializing database...
+2025-06-07 15:03:30 | ERROR    | app.main | lifespan:85 | Failed to start application: (oracledb.exceptions.DatabaseError) ORA-01017: invalid username/password; logon denied
+Help: https://docs.oracle.com/error-help/db/ora-01017/
+(Background on this error at: https://sqlalche.me/e/20/4xp6)
+2025-06-07 15:03:45 | INFO     | hr_ai_assistant.startup | setup_logging:163 | Logging configured - Level: INFO, Debug: True
+2025-06-07 15:03:45 | INFO     | hr_ai_assistant.startup | setup_logging:164 | Log files location: C:\Internal HR AI Assistant\logs
+2025-06-07 15:03:45 | INFO     | app.main | lifespan:56 | Starting HR AI Assistant application...
+2025-06-07 15:03:45 | INFO     | app.main | lifespan:60 | Initializing database...
+2025-06-07 15:03:46 | ERROR    | app.main | lifespan:85 | Failed to start application: (oracledb.exceptions.DatabaseError) ORA-01017: invalid username/password; logon denied
+Help: https://docs.oracle.com/error-help/db/ora-01017/
+(Background on this error at: https://sqlalche.me/e/20/4xp6)
+2025-06-07 15:05:25 | INFO     | hr_ai_assistant.startup | setup_logging:163 | Logging configured - Level: INFO, Debug: True
+2025-06-07 15:05:26 | INFO     | hr_ai_assistant.startup | setup_logging:164 | Log files location: C:\Internal HR AI Assistant\logs
+2025-06-07 15:05:26 | INFO     | app.main | lifespan:56 | Starting HR AI Assistant application...
+2025-06-07 15:05:26 | INFO     | app.main | lifespan:60 | Initializing database...
+2025-06-07 15:05:26 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | select sys_context( 'userenv', 'current_schema' ) from dual
+2025-06-07 15:05:26 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | [raw sql] {}
+2025-06-07 15:05:26 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | SELECT value FROM v$parameter WHERE name = 'compatible'
+2025-06-07 15:05:26 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | [raw sql] {}
+2025-06-07 15:05:26 | INFO     | sqlalchemy.engine.Engine | _connection_begin_impl:2698 | BEGIN (implicit)
+2025-06-07 15:05:26 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | SELECT tables_and_views.table_name 
+FROM (SELECT a_tables.table_name AS table_name, a_tables.owner AS owner 
+FROM all_tables a_tables UNION ALL SELECT a_views.view_name AS table_name, a_views.owner AS owner 
+FROM all_views a_views) tables_and_views 
+WHERE tables_and_views.table_name = :table_name AND tables_and_views.owner = :owner
+2025-06-07 15:05:26 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | [generated in 0.00301s] {'table_name': 'DEPARTMENTS', 'owner': 'HR_USER'}
+2025-06-07 15:05:26 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | SELECT tables_and_views.table_name 
+FROM (SELECT a_tables.table_name AS table_name, a_tables.owner AS owner 
+FROM all_tables a_tables UNION ALL SELECT a_views.view_name AS table_name, a_views.owner AS owner 
+FROM all_views a_views) tables_and_views 
+WHERE tables_and_views.table_name = :table_name AND tables_and_views.owner = :owner
+2025-06-07 15:05:26 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | [cached since 0.3982s ago] {'table_name': 'ROLES', 'owner': 'HR_USER'}
+2025-06-07 15:05:26 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | SELECT tables_and_views.table_name 
+FROM (SELECT a_tables.table_name AS table_name, a_tables.owner AS owner 
+FROM all_tables a_tables UNION ALL SELECT a_views.view_name AS table_name, a_views.owner AS owner 
+FROM all_views a_views) tables_and_views 
+WHERE tables_and_views.table_name = :table_name AND tables_and_views.owner = :owner
+2025-06-07 15:05:26 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | [cached since 0.4048s ago] {'table_name': 'EMPLOYEES', 'owner': 'HR_USER'}
+2025-06-07 15:05:26 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | SELECT tables_and_views.table_name 
+FROM (SELECT a_tables.table_name AS table_name, a_tables.owner AS owner 
+FROM all_tables a_tables UNION ALL SELECT a_views.view_name AS table_name, a_views.owner AS owner 
+FROM all_views a_views) tables_and_views 
+WHERE tables_and_views.table_name = :table_name AND tables_and_views.owner = :owner
+2025-06-07 15:05:26 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | [cached since 0.4178s ago] {'table_name': 'LEAVE_TYPES', 'owner': 'HR_USER'}
+2025-06-07 15:05:26 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | SELECT tables_and_views.table_name 
+FROM (SELECT a_tables.table_name AS table_name, a_tables.owner AS owner 
+FROM all_tables a_tables UNION ALL SELECT a_views.view_name AS table_name, a_views.owner AS owner 
+FROM all_views a_views) tables_and_views 
+WHERE tables_and_views.table_name = :table_name AND tables_and_views.owner = :owner
+2025-06-07 15:05:26 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | [cached since 0.4258s ago] {'table_name': 'LEAVE_BALANCES', 'owner': 'HR_USER'}
+2025-06-07 15:05:26 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | SELECT tables_and_views.table_name 
+FROM (SELECT a_tables.table_name AS table_name, a_tables.owner AS owner 
+FROM all_tables a_tables UNION ALL SELECT a_views.view_name AS table_name, a_views.owner AS owner 
+FROM all_views a_views) tables_and_views 
+WHERE tables_and_views.table_name = :table_name AND tables_and_views.owner = :owner
+2025-06-07 15:05:26 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | [cached since 0.4332s ago] {'table_name': 'LEAVE_REQUESTS', 'owner': 'HR_USER'}
+2025-06-07 15:05:26 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | SELECT tables_and_views.table_name 
+FROM (SELECT a_tables.table_name AS table_name, a_tables.owner AS owner 
+FROM all_tables a_tables UNION ALL SELECT a_views.view_name AS table_name, a_views.owner AS owner 
+FROM all_views a_views) tables_and_views 
+WHERE tables_and_views.table_name = :table_name AND tables_and_views.owner = :owner
+2025-06-07 15:05:26 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | [cached since 0.4384s ago] {'table_name': 'DOCUMENTS', 'owner': 'HR_USER'}
+2025-06-07 15:05:26 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | SELECT tables_and_views.table_name 
+FROM (SELECT a_tables.table_name AS table_name, a_tables.owner AS owner 
+FROM all_tables a_tables UNION ALL SELECT a_views.view_name AS table_name, a_views.owner AS owner 
+FROM all_views a_views) tables_and_views 
+WHERE tables_and_views.table_name = :table_name AND tables_and_views.owner = :owner
+2025-06-07 15:05:26 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | [cached since 0.4459s ago] {'table_name': 'DOCUMENT_REQUESTS', 'owner': 'HR_USER'}
+2025-06-07 15:05:26 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | SELECT tables_and_views.table_name 
+FROM (SELECT a_tables.table_name AS table_name, a_tables.owner AS owner 
+FROM all_tables a_tables UNION ALL SELECT a_views.view_name AS table_name, a_views.owner AS owner 
+FROM all_views a_views) tables_and_views 
+WHERE tables_and_views.table_name = :table_name AND tables_and_views.owner = :owner
+2025-06-07 15:05:26 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | [cached since 0.4521s ago] {'table_name': 'SURVEYS', 'owner': 'HR_USER'}
+2025-06-07 15:05:26 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | SELECT tables_and_views.table_name 
+FROM (SELECT a_tables.table_name AS table_name, a_tables.owner AS owner 
+FROM all_tables a_tables UNION ALL SELECT a_views.view_name AS table_name, a_views.owner AS owner 
+FROM all_views a_views) tables_and_views 
+WHERE tables_and_views.table_name = :table_name AND tables_and_views.owner = :owner
+2025-06-07 15:05:26 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | [cached since 0.4585s ago] {'table_name': 'SURVEY_RESPONSES', 'owner': 'HR_USER'}
+2025-06-07 15:05:26 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | SELECT tables_and_views.table_name 
+FROM (SELECT a_tables.table_name AS table_name, a_tables.owner AS owner 
+FROM all_tables a_tables UNION ALL SELECT a_views.view_name AS table_name, a_views.owner AS owner 
+FROM all_views a_views) tables_and_views 
+WHERE tables_and_views.table_name = :table_name AND tables_and_views.owner = :owner
+2025-06-07 15:05:26 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | [cached since 0.4645s ago] {'table_name': 'ENGAGEMENT_METRICS', 'owner': 'HR_USER'}
+2025-06-07 15:05:26 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | SELECT tables_and_views.table_name 
+FROM (SELECT a_tables.table_name AS table_name, a_tables.owner AS owner 
+FROM all_tables a_tables UNION ALL SELECT a_views.view_name AS table_name, a_views.owner AS owner 
+FROM all_views a_views) tables_and_views 
+WHERE tables_and_views.table_name = :table_name AND tables_and_views.owner = :owner
+2025-06-07 15:05:26 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | [cached since 0.4705s ago] {'table_name': 'CHAT_SESSIONS', 'owner': 'HR_USER'}
+2025-06-07 15:05:26 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | SELECT tables_and_views.table_name 
+FROM (SELECT a_tables.table_name AS table_name, a_tables.owner AS owner 
+FROM all_tables a_tables UNION ALL SELECT a_views.view_name AS table_name, a_views.owner AS owner 
+FROM all_views a_views) tables_and_views 
+WHERE tables_and_views.table_name = :table_name AND tables_and_views.owner = :owner
+2025-06-07 15:05:26 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | [cached since 0.4772s ago] {'table_name': 'QUERY_LOGS', 'owner': 'HR_USER'}
+2025-06-07 15:05:26 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | 
+CREATE TABLE departments (
+	id INTEGER NOT NULL, 
+	name VARCHAR2(100 CHAR) NOT NULL, 
+	description CLOB, 
+	department_code VARCHAR2(10 CHAR) NOT NULL, 
+	manager_id INTEGER, 
+	budget NUMERIC(15, 2), 
+	location VARCHAR2(100 CHAR), 
+	is_active SMALLINT, 
+	created_at DATE, 
+	updated_at DATE, 
+	PRIMARY KEY (id), 
+	UNIQUE (department_code), 
+	FOREIGN KEY(manager_id) REFERENCES employees (id)
+)
+
+
+2025-06-07 15:05:26 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | [no key 0.00788s] {}
+2025-06-07 15:05:27 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | CREATE UNIQUE INDEX ix_departments_name ON departments (name)
+2025-06-07 15:05:27 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | [no key 0.00304s] {}
+2025-06-07 15:05:27 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | CREATE INDEX ix_departments_id ON departments (id)
+2025-06-07 15:05:27 | INFO     | sqlalchemy.engine.Engine | _execute_context:1842 | [no key 0.00278s] {}
+2025-06-07 15:05:27 | INFO     | sqlalchemy.engine.Engine | _connection_rollback_impl:2701 | ROLLBACK
+2025-06-07 15:05:27 | ERROR    | app.main | lifespan:85 | Failed to start application: (oracledb.exceptions.DatabaseError) ORA-01408: such column list already indexed
+Help: https://docs.oracle.com/error-help/db/ora-01408/
+[SQL: CREATE INDEX ix_departments_id ON departments (id)]
+(Background on this error at: https://sqlalche.me/e/20/4xp6)

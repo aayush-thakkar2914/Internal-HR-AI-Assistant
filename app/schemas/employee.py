@@ -323,8 +323,8 @@ class EmployeeSearchParams(BaseModel):
     hire_date_to: Optional[date] = None
     skip: int = Field(0, ge=0)
     limit: int = Field(100, ge=1, le=1000)
-    sort_by: Optional[str] = Field("full_name", regex="^(full_name|email|hire_date|department_name|role_title)$")
-    sort_order: Optional[str] = Field("asc", regex="^(asc|desc)$")
+    sort_by: Optional[str] = Field("full_name", pattern="^(full_name|email|hire_date|department_name|role_title)$")
+    sort_order: Optional[str] = Field("asc", pattern="^(asc|desc)$")
 
 # Bulk Operations Schemas
 class EmployeeBulkUpdate(BaseModel):

@@ -105,7 +105,7 @@ class LeaveRequestBase(BaseModel):
     emergency_phone: Optional[str] = Field(None, max_length=20)
     priority: LeavePriorityEnum = LeavePriorityEnum.NORMAL
     is_half_day: bool = False
-    half_day_session: Optional[str] = Field(None, regex="^(morning|afternoon)$")
+    half_day_session: Optional[str] = Field(None, pattern="^(morning|afternoon)$")
     work_handover: Optional[str] = None
     backup_contact_id: Optional[int] = None
 
@@ -141,7 +141,7 @@ class LeaveRequestUpdate(BaseModel):
     emergency_phone: Optional[str] = Field(None, max_length=20)
     priority: Optional[LeavePriorityEnum] = None
     is_half_day: Optional[bool] = None
-    half_day_session: Optional[str] = Field(None, regex="^(morning|afternoon)$")
+    half_day_session: Optional[str] = Field(None, pattern="^(morning|afternoon)$")
     work_handover: Optional[str] = None
     backup_contact_id: Optional[int] = None
 
@@ -203,7 +203,7 @@ class LeaveRequestResponse(BaseModel):
 
 # Leave Approval Schemas
 class LeaveApprovalAction(BaseModel):
-    action: str = Field(..., regex="^(approve|reject)$")
+    action: str = Field(..., pattern="^(approve|reject)$")
     comments: Optional[str] = Field(None, max_length=500)
 
 class LeaveManagerApproval(LeaveApprovalAction):
@@ -232,8 +232,8 @@ class LeaveRequestSearchParams(BaseModel):
     requires_approval: Optional[bool] = None
     skip: int = Field(0, ge=0)
     limit: int = Field(100, ge=1, le=1000)
-    sort_by: Optional[str] = Field("submitted_date", regex="^(submitted_date|start_date|employee_name|status)$")
-    sort_order: Optional[str] = Field("desc", regex="^(asc|desc)$")
+    sort_by: Optional[str] = Field("submitted_date", pattern="^(submitted_date|start_date|employee_name|status)$")
+    sort_order: Optional[str] = Field("desc", pattern="^(asc|desc)$")
 
 # Leave Calendar Schema
 class LeaveCalendarEntry(BaseModel):
@@ -292,7 +292,7 @@ class LeaveBalanceSummary(BaseModel):
 # Bulk Leave Operations
 class LeaveBulkApproval(BaseModel):
     leave_request_ids: List[int] = Field(..., min_items=1)
-    action: str = Field(..., regex="^(approve|reject)$")
+    action: str = Field(..., pattern="^(approve|reject)$")
     comments: Optional[str] = Field(None, max_length=500)
 
 class LeaveRequestBatch(BaseModel):

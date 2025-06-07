@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document Request Completed</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { background-color: #2196F3; color: white; padding: 20px; text-align: center; }
+        .content { background-color: #f9f9f9; padding: 20px; }
+        .footer { background-color: #333; color: white; padding: 15px; text-align: center; font-size: 12px; }
+        .details { background-color: white; padding: 15px; margin: 10px 0; border-left: 4px solid #2196F3; }
+        .button { display: inline-block; padding: 10px 20px; background-color: #2196F3; color: white; text-decoration: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📄 Document Ready for Download</h1>
+        </div>
+        <div class="content">
+            <p>Dear {{ employee_name }},</p>
+            <p>Your requested document has been processed and is ready for download.</p>
+            
+            <div class="details">
+                <h3>Document Details:</h3>
+                <p><strong>Request ID:</strong> {{ request_id }}</p>
+                <p><strong>Document:</strong> {{ document_title }}</p>
+                <p><strong>Type:</strong> {{ document_type }}</p>
+                <p><strong>Processed By:</strong> {{ processed_by }}</p>
+                <p><strong>Completion Date:</strong> {{ completion_date }}</p>
+                {% if completion_notes %}
+                <p><strong>Notes:</strong> {{ completion_notes }}</p>
+                {% endif %}
+            </div>
+            
+            <p>{% if download_link %}<a href="{{ download_link }}" class="button">Download Document</a>{% else %}Please contact HR to collect your document.{% endif %}</p>
+            
+            <p>If you have any questions, please don't hesitate to contact us.</p>
+        </div>
+        <div class="footer">
+            <p>{{ company_name }} HR Department | {{ hr_email }} | {{ hr_phone }}</p>
+        </div>
+    </div>
+</body>
+</html>
+            

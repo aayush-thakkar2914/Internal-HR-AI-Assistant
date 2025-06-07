@@ -1,0 +1,19 @@
+2025-06-07 14:54:55 | ERROR    | app.main | lifespan:85 | Failed to start application: (oracledb.exceptions.DatabaseError) ORA-01017: invalid username/password; logon denied
+Help: https://docs.oracle.com/error-help/db/ora-01017/
+(Background on this error at: https://sqlalche.me/e/20/4xp6)
+2025-06-07 14:56:30 | ERROR    | app.main | lifespan:85 | Failed to start application: (oracledb.exceptions.DatabaseError) ORA-01017: invalid username/password; logon denied
+Help: https://docs.oracle.com/error-help/db/ora-01017/
+(Background on this error at: https://sqlalche.me/e/20/4xp6)
+2025-06-07 14:58:10 | ERROR    | app.main | lifespan:85 | Failed to start application: (oracledb.exceptions.DatabaseError) ORA-01017: invalid username/password; logon denied
+Help: https://docs.oracle.com/error-help/db/ora-01017/
+(Background on this error at: https://sqlalche.me/e/20/4xp6)
+2025-06-07 15:03:30 | ERROR    | app.main | lifespan:85 | Failed to start application: (oracledb.exceptions.DatabaseError) ORA-01017: invalid username/password; logon denied
+Help: https://docs.oracle.com/error-help/db/ora-01017/
+(Background on this error at: https://sqlalche.me/e/20/4xp6)
+2025-06-07 15:03:46 | ERROR    | app.main | lifespan:85 | Failed to start application: (oracledb.exceptions.DatabaseError) ORA-01017: invalid username/password; logon denied
+Help: https://docs.oracle.com/error-help/db/ora-01017/
+(Background on this error at: https://sqlalche.me/e/20/4xp6)
+2025-06-07 15:05:27 | ERROR    | app.main | lifespan:85 | Failed to start application: (oracledb.exceptions.DatabaseError) ORA-01408: such column list already indexed
+Help: https://docs.oracle.com/error-help/db/ora-01408/
+[SQL: CREATE INDEX ix_departments_id ON departments (id)]
+(Background on this error at: https://sqlalche.me/e/20/4xp6)

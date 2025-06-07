@@ -84,7 +84,7 @@ class ChatSessionUpdate(BaseModel):
     satisfaction_rating: Optional[int] = Field(None, ge=1, le=5)
     was_helpful: Optional[bool] = None
     user_feedback: Optional[str] = Field(None, max_length=1000)
-    resolution_status: Optional[str] = Field(None, regex="^(resolved|unresolved|escalated)$")
+    resolution_status: Optional[str] = Field(None, pattern="^(resolved|unresolved|escalated)$")
 
 class ChatSessionResponse(BaseModel):
     id: int
@@ -168,8 +168,8 @@ class ChatSearchParams(BaseModel):
     requires_escalation: Optional[bool] = None
     skip: int = Field(0, ge=0)
     limit: int = Field(100, ge=1, le=1000)
-    sort_by: Optional[str] = Field("created_at", regex="^(created_at|last_activity|total_messages|satisfaction_rating)$")
-    sort_order: Optional[str] = Field("desc", regex="^(asc|desc)$")
+    sort_by: Optional[str] = Field("created_at", pattern="^(created_at|last_activity|total_messages|satisfaction_rating)$")
+    sort_order: Optional[str] = Field("desc", pattern="^(asc|desc)$")
 
 # Chat Analytics Schemas
 class ChatAnalytics(BaseModel):
@@ -219,7 +219,7 @@ class ChatFeedback(BaseModel):
 class ChatEscalation(BaseModel):
     query_id: int
     reason: str = Field(..., min_length=10, max_length=500)
-    priority: str = Field("normal", regex="^(low|normal|high|urgent)$")
+    priority: str = Field("normal", pattern="^(low|normal|high|urgent)$")
     additional_context: Optional[str] = Field(None, max_length=1000)
 
 # Context and RAG Schemas
